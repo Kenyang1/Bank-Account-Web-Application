@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{614D5AD3-C35E-41AF-8C0E-172E24B7CB30}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BankAccountGUI</RootNamespace>
+    <AssemblyName>BankAccountGUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BalanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BalanceForm.Designer.cs">
+      <DependentUpon>BalanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BankAccount.cs" />
+    <Compile Include="DepositForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepositForm.Designer.cs">
+      <DependentUpon>DepositForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FastCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastCash.Designer.cs">
+      <DependentUpon>FastCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharedData.cs" />
+    <Compile Include="Transaction.cs" />
+    <Compile Include="TransactionHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionHistoryForm.Designer.cs">
+      <DependentUpon>TransactionHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Withdraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Withdraw.Designer.cs">
+      <DependentUpon>Withdraw.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BalanceForm.resx">
+      <DependentUpon>BalanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepositForm.resx">
+      <DependentUpon>DepositForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastCash.resx">
+      <DependentUpon>FastCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TransactionHistoryForm.resx">
+      <DependentUpon>TransactionHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Withdraw.resx">
+      <DependentUpon>Withdraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\BalanceForm.datasource" />
+    <None Include="Properties\DataSources\BankAccount.BankAccount.datasource" />
+    <None Include="Properties\DataSources\BankAccount.Person.datasource" />
+    <None Include="Properties\DataSources\BankAccountGUI.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\BankAccountGUI.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\DepositForm.datasource" />
+    <None Include="Properties\DataSources\FastCash.datasource" />
+    <None Include="Properties\DataSources\MainForm.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\SharedData.datasource" />
+    <None Include="Properties\DataSources\Transaction.datasource" />
+    <None Include="Properties\DataSources\TransactionHistoryForm.datasource" />
+    <None Include="Properties\DataSources\Withdraw.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Southern_New_Hampshire_University_seal.svg.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"
+</PreBuildEvent>
+  </PropertyGroup>
+</Project>
